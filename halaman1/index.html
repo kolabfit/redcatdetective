@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Cat Detective</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="../all-assets/allstyle.css" />
+</head>
+
+<body>
+    <div class="container-main" id="container-main">
+        <!-- Langit -->
+        <div id="langit" class="layer1"></div>
+
+        <!-- Awan -->
+        <div id="awan" class="layer2" style="z-index: 2"></div>
+        <div>
+            <div alt="Trotoar" class="trotoar"></div>
+            <div alt="asep" class="asep"></div>
+            <img src="assets/contents/awan.png" alt="awan" class="awan"/>
+        </div>
+
+        <!-- Landscape -->
+        <div id="landscape" class="layer3" style="z-index: 3"></div>
+
+        <!-- Ground -->
+        <div class="layer4" style="z-index: 4"></div>
+
+        <!-- Body -->
+        <div class="layer5" style="z-index: 5">
+            <div class="badan"></div>
+            <div class="pala"></div>
+            <div id="blink" class="mata"></div>
+            <div class="bola-mata"></div>
+            <div class="topi"></div>
+            <div id="logobelt" class="logobelt"></div>
+            <div class="belt-click" onclick="rotatebeltlogo()"></div>
+        </div>
+
+        <!-- Title -->
+        <div class="layer6" style="z-index: 6"></div>
+
+        <!-- Trigger -->
+        <div class="trigger" style="z-index: 100">
+            <div class="popup-trigger" onclick="popupShow()"></div>
+        </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup-container" id="popup">
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
