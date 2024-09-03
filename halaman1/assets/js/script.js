@@ -24,31 +24,26 @@ document.addEventListener("mousemove", function (e) {
 
 let running = false;
 
-function animateBurgerRocket() {
+function rotatebeltlogo() {
     if (running) {
         return;
     }
 
     running = true;
     let move = null;
-    let posY = 35.0;
-    let posX = 32.0;
-    rocketTerbangAudio.play();
-    rocketTerbangAudio.currentTime = 0;
+    let rotation = 0;
     const elem = document.getElementById("logobelt");
 
     clearInterval(move);
     move = setInterval(frame, 20);
 
     function frame() {
-        if (posX >= 80 && posY <= -100) {
+        if (rotation >= 720) {
             running = false;
             clearInterval(move);
         } else {
-            posX += 0.1;
-            posY -= 0.7;
-            elem.style.left = posX + "%";
-            elem.style.top = posY + "%";
+            rotation += 5;
+            elem.style.transform = `rotate(${rotation}deg)`;
         }
     }
 }

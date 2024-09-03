@@ -137,11 +137,11 @@ div {
 
 .logobelt {
     position: absolute;
-    top: 82%;
+    top: 80%;
     left: 77.5%;
     width: 40%;
     width: 8%;
-    height: 11%;
+    height: 15%;
     transform: translate(0%, 0%);
     background-image: url('../contents/body/logosabuk.png');
 }
@@ -157,14 +157,15 @@ div {
 }
 
 .belt-click {
+    z-index: 10;
     position: absolute;
     top: 82%;
     left: 77.5%;
     width: 40%;
     width: 8%;
-    height: 11%;
+    height: 8%;
     transform: translate(0%, 0%);
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
 }
 
 .belt-click:hover {
@@ -203,19 +204,6 @@ div {
     justify-content: center;
     align-items: center;
     gap: 25px;
-}
-
-.exit-button{
-    position: absolute;
-    bottom: -10%;
-    align-self: flex-end;
-    padding-right: 10%;
-    width: 10%;
-    height: auto;
-}
-
-.exit-button:hover {
-    cursor: url(../../../all-assets/CURSORHOVER.png) 30 30, crosshair;
 }
 
 .popup-trigger{
