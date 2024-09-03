@@ -55,98 +55,71 @@ function rotatebeltlogo() {
     }
 }
 
-let runningDoor = false;
-let clickedDoor = false;
+// Animasi Motor
 
-function animateDoor() {
-    if (runningDoor || clickedDoor) {
+let runningMotor = false;
+
+function motorRide() {
+    if (runningMotor) {
         return;
     }
 
-    soundOpenDoor.play();
-    soundWind.play();
-
-    runningDoor = true;
+    runningMotor = true;
 
     let move = null;
     let posX = 0;
+    let posY = 0;
+    let rotationMotor = 0;
 
     clearInterval(move);
-    move = setInterval(openFrame, 20);
+    move = setInterval(firstFrame, 20);
 
-    const door = document.getElementById("door");
-    const barangMasuk = document.getElementById("barangMasuk");
+    const motor = document.getElementById("motor");
 
-    function openFrame() {
-        if (posX <= -60) {
+    function firstFrame() {
+        if (posX <= -600 && posY >= 200) {
             clearInterval(move);
             setTimeout(() => {
-                move = setInterval(closeFrame, 20);
-            }, 2000); // Tahan pintu terbuka selama 2 detik
+                motor.style.width = 30 + "%";
+                motor.style.height = 64 + "%";
+                posX = -130;
+                posY = 50;
+                motor.style.transform = `translate(${posX}%, ${posY}%)`;
+                move = setInterval(secondFrame, 20);
+            }, 1000); // Delay 1 detik
         } else {
-            posX -= 1;
-            door.style.transform = `translate(${posX}%, 0)`;
-            barangMasuk.style.display = "block";
-            // if (posX <= -15) {
-            //     barangMasuk.style.display = "block";
-            // }
+            posX -= 10;
+            posY += 4;
+            motor.style.transform = `translate(${posX}%, ${posY}%)`;
         }
     }
 
-    function closeFrame() {
-        if (posX >= 0) {
+    function secondFrame() {
+        if (posX <= -40 && posY <= -50) {
             clearInterval(move);
-            barangMasuk.style.display = "none";
-            soundOpenDoor.pause();
-            soundWind.pause();
-            soundOpenDoor.currentTime = 0;
-            soundWind.currentTime = 0;
-            clickanimation.style.display = "block";
-            runningDoor = false;
+            motor.style.zIndex = 40;
+            move = setInterval(thirdFrame, 20);
         } else {
-            posX += 0.8;
-            door.style.transform = `translate(${posX}%, 0)`;
+            posX -= 0.5;
+            posY -= 1;
+            rotationMotor += 0.1;
+            motor.style.transform = `rotate(${rotationMotor}deg)`;
+            motor.style.transform = `translate(${posX}%, ${posY}%)`;
         }
     }
-}
 
-function enterDoor() {
-    if (clickedDoor || runningDoor) {
-        return;
-    }
-
-    const clickanimation = document.getElementById("clickanimation");
-    clickanimation.style.display = "none";
-
-    soundOpenDoor.play();
-    soundWind.play();
-
-    clickedDoor = true;
-    let move = null;
-    let posX = 0;
-    const elem = document.getElementById("door");
-
-    clearInterval(move);
-    move = setInterval(openFrame, 20);
-
-    const door = document.getElementById("door");
-    const barangMasuk = document.getElementById("barangMasuk");
-
-    function openFrame() {
-        if (posX <= -60) {
+    function thirdFrame() {
+        if (posX <= -400 && posY >= 50) {
+            runningMotor = false;
+            motor.style.zIndex = 3;
+            motor.style.transform = `translate(0%, 0%)`;
+            motor.style.width = 8 + "%";
+            motor.style.height = 16 + "%";
             clearInterval(move);
-            soundOpenDoor.pause();
-            soundWind.pause();
-            soundOpenDoor.currentTime = 0;
-            soundWind.currentTime = 0;
-            window.top.open("../page2.html", "_self");
         } else {
-            posX -= 1;
-            elem.style.transform = `translate(${posX}%, 0)`;
-            barangMasuk.style.display = "block";
-            // if (posX <= -15) {
-            //     barangMasuk.style.display = "block";
-            // }
+            posX -= 2;
+            posY += 2;
+            motor.style.transform = `translate(${posX}%, ${posY}%)`;
         }
     }
 }

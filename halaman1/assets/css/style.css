@@ -230,6 +230,31 @@ div {
     cursor: url(../../../all-assets/CURSORHOVER.png) 30 30, crosshair;
 }
 
+.motor {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    width: 8%;
+    height: 16%;
+    transform: translate(0%, 0%);
+    background-image: url('../contents/motor.png');
+}
+
+.police-trigger {
+    position: absolute;
+    top: 40%;
+    left: 37%;
+    width: 9%;
+    height: 15%;
+    transform: translate(0%, 0%);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+.police-trigger:hover {
+    cursor: url(../../../all-assets/CURSORHOVER.png) 30 30, crosshair;
+}
+
 .popup-container {
     overflow: visible;
     position: absolute;
