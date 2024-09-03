@@ -108,8 +108,8 @@ div {
 .mata {
     position: absolute;
     top: 20%;
-    left: 74%;
-    width: 10%;
+    left: 73%;
+    width: 12%;
     height: 12%;
     transform: translate(0%, 0%);
     background-image: url('../contents/body/mata.png');
@@ -119,10 +119,55 @@ div {
     position: absolute;
     top: 20%;
     left: 74%;
-    width: 10%;
+    width: 12%;
     height: 12%;
     transform: translate(0%, 0%);
     background-image: url('../contents/body/bolamata.png');
+}
+
+#blink {
+    animation: blinkAnim 3s infinite ease-in-out; 
+}
+
+@keyframes blinkAnim {
+    0% {
+        height: 12%; 
+        top: 20%;
+    }
+    5% {
+        height: 1%; 
+        top: 25%;
+    }
+    10% {
+        height: 12%; 
+        top: 20%;
+    }
+}
+
+#blinkpupil {
+    animation: blinkPupilAnim 3s infinite ease-in-out; 
+}
+
+@keyframes blinkPupilAnim {
+    0% {
+        height: 12%; 
+        top: 20%;
+        left: 73.4%;
+    }
+    5% {
+        height: 1%; 
+        top: 25%;
+    }
+    10% {
+        height: 12%; 
+        top: 20%;
+    }
+    50% {
+        left: 72.7%;
+    }
+    100% {
+        left: 73.4%;
+    }
 }
 
 .topi {
@@ -133,6 +178,19 @@ div {
     height: 18%;
     transform: translate(0%, 0%);
     background-image: url('../contents/body/topi.png');
+    animation: hatAnimation 3s infinite ease-in-out; 
+}
+
+@keyframes hatAnimation {
+    0% {
+        top: 2%;
+    }
+    5% {
+        top: 0%;
+    }
+    10% {
+        top: 2%;
+    }
 }
 
 .logobelt {
@@ -146,7 +204,7 @@ div {
     background-image: url('../contents/body/logosabuk.png');
 }
 
-.layer6 {
+.title {
     position: absolute;
     top: 2%;
     left: 5%;

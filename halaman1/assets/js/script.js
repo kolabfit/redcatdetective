@@ -20,6 +20,13 @@ document.addEventListener("mousemove", function (e) {
     landscape.style.transform = `translateX(${offsetLandscape}px)`;
 });
 
+// Blinking
+
+const blink = document.getElementById("blink");
+
+const randomDelay = Math.random() * 2 + 's'; // Random delay between 0 and 2 seconds
+blink.style.setProperty('--random-delay', randomDelay);
+
 // Animasi Belt
 
 let running = false;
@@ -42,7 +49,7 @@ function rotatebeltlogo() {
             running = false;
             clearInterval(move);
         } else {
-            rotation += 5;
+            rotation += 2;
             elem.style.transform = `rotate(${rotation}deg)`;
         }
     }
