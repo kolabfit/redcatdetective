@@ -100,8 +100,8 @@ function motorRide() {
             motor.style.zIndex = 40;
             move = setInterval(thirdFrame, 20);
         } else {
-            posX -= 0.5;
-            posY -= 1;
+            posX -= 2;
+            posY -= 3;
             rotationMotor += 0.1;
             motor.style.transform = `rotate(${rotationMotor}deg)`;
             motor.style.transform = `translate(${posX}%, ${posY}%)`;
@@ -117,8 +117,8 @@ function motorRide() {
             motor.style.height = 16 + "%";
             clearInterval(move);
         } else {
-            posX -= 2;
-            posY += 2;
+            posX -= 1;
+            posY += 0.5;
             motor.style.transform = `translate(${posX}%, ${posY}%)`;
         }
     }
