@@ -139,3 +139,24 @@ function popupHide() {
     document.getElementById("popup").style.display = "none";
     document.getElementById("container-main").style.filter = "none";
 }
+
+// Hyperlink
+function goToTelegram() {
+    window.open("https://t.me/hamburg_sol");
+}
+
+function goToTwitter() {
+    window.open("https://x.com/Hamburg_tuff");
+}
+
+function goToDexTools() {
+    window.open(
+        "https://www.dextools.io/app/en/solana/pair-explorer/6TdbXgBENkkwrjrYCopDdNCCyZnmodpu6pYXRAgZdMLg"
+    );
+}
+
+function goToDexScreener() {
+    window.open(
+        "https://dexscreener.com/solana/6tdbxgbenkkwrjrycopddnccyznmodpu6pyxragzdmlg"
+    );
+}

@@ -255,16 +255,107 @@ div {
     cursor: url(../../../all-assets/CURSORHOVER.png) 30 30, crosshair;
 }
 
+.animation-cat{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../contents/popup/popupredcatweb-ezgif.com-video-to-webp-converter\ \(1\).webp');
+}
+
+.telegram{
+    position: absolute;
+    z-index: 100;
+    background-color: transparent;
+    width: 28.2%;
+    height: 21%;
+    left: 29.2%;
+    top: 45%;
+    rotate: -20deg;
+}
+
+.telegram:hover{
+    cursor: url(../../../all-assets/CURSORHOVER.png) 30 30, crosshair;
+}
+
+.twitter{
+    position: absolute;
+    z-index: 99;
+    background-color: transparent;
+    width: 27%;
+    rotate: 10deg;
+    left: 8%;
+    height: 21%;
+    bottom: 19%;
+}
+
+.twitter:hover{
+    cursor: url(../../../all-assets/CURSORHOVER.png) 30 30, crosshair;
+}
+
+.dextools{
+    z-index:100;
+    position: absolute;
+    background-color: transparent;
+    bottom: 10%;
+    height: 21%;
+    width: 27.8%;
+    left: 43%;
+    rotate: -15deg;
+
+}
+
+.dextools:hover{
+    cursor: url(../../../all-assets/CURSORHOVER.png) 30 30, crosshair;
+}
+
+p{
+    margin: 0;
+    text-align: center;
+}
+
+.dexscreener{
+    z-index: 99;
+    position: absolute;
+    background-color: transparent;
+    bottom: 28.5%;
+    height: 20.5%;
+    width: 27.8%;
+    right: 7%;
+    rotate: 10deg;
+}
+
+.dexscreener:hover{
+    cursor: url(../../../all-assets/CURSORHOVER.png) 30 30, crosshair;
+}
+
+.close{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    position: absolute;
+    bottom: 16%;
+    right: 10%;
+    z-index: 100;
+    border: 2px solid black;
+    width: max-content;
+    height: max-content;
+}
+
+.close:hover{
+    cursor: url(../../../all-assets/CURSORHOVER.png) 30 30, crosshair;
+}
+
 .popup-container {
     overflow: visible;
     position: absolute;
     display: none;
-    right: 37%;
-    top:20%;
+    left: 18%;
+    top:35%;
     z-index: 100;
     width: 23%;
-    height: 60%;
-    background-color: red;
+    height: 70%;
+    background-image: url('../contents/popup/pop\ up\ redcat\ web\ \(1\).png');
 }
 
 .popup-background {
