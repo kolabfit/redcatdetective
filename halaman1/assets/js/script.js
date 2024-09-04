@@ -105,7 +105,7 @@ function motorRide() {
             move = setInterval(thirdFrame, 20);
         } else {
             posX -= 2;
-            posY -= 3;
+            posY -= 5;
             rotationMotor += 0.1;
             motor.style.transform = `rotate(${rotationMotor}deg)`;
             motor.style.transform = `translate(${posX}%, ${posY}%)`;
