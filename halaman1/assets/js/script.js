@@ -3,10 +3,12 @@ document.addEventListener("mousemove", function (e) {
     const langit = document.getElementById("langit");
     const awan = document.getElementById("awan");
     const landscape = document.getElementById("landscape");
+    const title = document.getElementById("title");
 
     const speedAwan = 0.06;
     const speedlangit = 0.03;
-    const speedLandscape = 0.005;
+    const speedLandscape = 0.008;
+    const speedTitle = 0.02;
 
     const windowWidth = window.innerWidth;
     const mouseX = e.clientX;
@@ -14,18 +16,20 @@ document.addEventListener("mousemove", function (e) {
     const offsetAwan = (mouseX - windowWidth / 2) * speedAwan;
     const offsetlangit = (mouseX - windowWidth / 2) * speedlangit;
     const offsetLandscape = (mouseX - windowWidth / 2) * speedLandscape;
+    const offsetTittle = (mouseX - windowWidth / 2) * speedTitle;
 
     awan.style.transform = `translateX(${offsetAwan}px)`;
     langit.style.transform = `translateX(${offsetlangit}px)`;
     landscape.style.transform = `translateX(${offsetLandscape}px)`;
+    title.style.transform = `translateX(${offsetTittle}px)`;
 });
 
 // Blinking
 
 const blink = document.getElementById("blink");
 
-const randomDelay = Math.random() * 2 + 's'; // Random delay between 0 and 2 seconds
-blink.style.setProperty('--random-delay', randomDelay);
+const randomDelay = Math.random() * 2 + "s"; // Random delay between 0 and 2 seconds
+blink.style.setProperty("--random-delay", randomDelay);
 
 // Animasi Belt
 
