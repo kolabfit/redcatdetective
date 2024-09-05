@@ -198,10 +198,40 @@ div {
     top: 80%;
     left: 77.5%;
     width: 40%;
+    width: 8vw;
+    height: 8vw;
+    transform: translate(0%, 0%);
+    background-image: url('../contents/body/logosabuk.png');
+    animation: beltWobbleAnim 3s infinite ease-in-out; 
+}
+
+.belt-click {
+    z-index: 10;
+    position: absolute;
+    top: 82%;
+    left: 77.5%;
+    width: 40%;
     width: 8%;
     height: 15%;
     transform: translate(0%, 0%);
-    background-image: url('../contents/body/logosabuk.png');
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    animation: beltWobbleAnim 3s infinite ease-in-out; 
+}
+
+.belt-click:hover {
+    cursor: url(../../../all-assets/CURSORHOVER.png) 30 30, crosshair;
+}
+
+@keyframes beltWobbleAnim {
+    0% {
+        top: 80%;
+    }
+    50% {
+        top: 81%;
+    }
+    100% {
+        top: 80%;
+    }
 }
 
 .title {
@@ -212,22 +242,6 @@ div {
     height: 35%;
     transform: translate(0%, 0%);
     background-image: url('../contents/redcatteks.png');
-}
-
-.belt-click {
-    z-index: 10;
-    position: absolute;
-    top: 82%;
-    left: 77.5%;
-    width: 40%;
-    width: 8%;
-    height: 8%;
-    transform: translate(0%, 0%);
-    /* background-color: rgba(0, 0, 0, 0.5); */
-}
-
-.belt-click:hover {
-    cursor: url(../../../all-assets/CURSORHOVER.png) 30 30, crosshair;
 }
 
 .motor {

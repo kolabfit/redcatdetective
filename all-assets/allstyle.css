@@ -1,60 +1,132 @@
 * {
-    cursor: url(CURSOR.png) 30 30, crosshair;
-    overflow-x: hidden;
-    overflow-y: hidden;
+  cursor: url(CURSOR.png) 30 30, crosshair;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    background-color: black;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: black;
 }
 
 .framescreen {
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .musichandler {
-    position: fixed;
-    top: 85%;
-    left: 2.5%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-    background-image: url(play.png);
-    width: 6%;
-    height: 12%;
-    z-index: 2;
-    /* background-color: red; */
+  position: fixed;
+  top: 90%;
+  left: 1.5%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url(play.png);
+  width: 3%;
+  height: 6%;
+  z-index: 2;
+  /* background-color: red; */
 }
 
 .musichandler:hover {
-    cursor: url(CURSORHOVER.png) 30 30, crosshair;
+  cursor: url(CURSORHOVER.png) 30 30, crosshair;
+}
+
+.Text {
+  position: fixed;
+  top: 85%;
+  left: 8%;
+  width: 100%;
+  height: 12%;
+  z-index: 2;
+}
+
+.Email {
+  position: fixed;
+  top: 90.5%;
+  left: 8%;
+  width: 100%;
+  height: 12%;
+  z-index: 2;
+}
+
+.CAImageText {
+  position: fixed;
+  top: 86%;
+  left: 5.5%;
+  width: 2%;
+  height: 4%;
+  z-index: 2;
+}
+
+.CAImageEmail {
+  position: fixed;
+  top: 92%;
+  left: 5.5%;
+  width: 2%;
+  height: 4%;
+  z-index: 2;
 }
 
 @media (max-width: 700px) {
-    .framescreen {
-        position: sticky;
-        width: 1900px;
-    }
+  .framescreen {
+    position: sticky;
+    width: 1900px;
+  }
 
-    .musichandler {
-        top: 90%;
-        left: 2.5%;
-        width: 20%;
-        height: 8%;
-    }
+  .musichandler {
+    top: 94%;
+    left: 2.5%;
+    width: 10%;
+    height: 5%;
+  }
 
-    * {
-        overflow-x: scroll;
-        overflow-y: hidden;
-    }
+  .Text {
+    position: fixed;
+    top: 91%;
+    left: 21%;
+    width: 100%;
+    height: 12%;
+    z-index: 2;
+  }
+
+  .Email {
+    position: fixed;
+    top: 95%;
+    left: 21%;
+    width: 100%;
+    height: 12%;
+    z-index: 2;
+  }
+
+  .CAImageText {
+    position: fixed;
+    top: 92%;
+    left: 15%;
+    width: 5%;
+    height: 3%;
+    z-index: 2;
+  }
+
+  .CAImageEmail {
+    position: fixed;
+    top: 96%;
+    left: 15%;
+    width: 5%;
+    height: 3%;
+    z-index: 2;
+  }
+
+  * {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
 }
