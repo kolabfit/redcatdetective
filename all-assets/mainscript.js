@@ -16,7 +16,7 @@ function setPage() {
     console.log(framescreen.style.height + "px");
 }
 
-const loopingSound = new Audio("all-assets/backsoundsfx.mp3");
+const loopingSound = new Audio("all-assets/backsoundsfx.MP3");
 
 const musichandler = document.getElementById("musichandler");
 
