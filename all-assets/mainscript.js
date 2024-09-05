@@ -27,11 +27,11 @@ let isPlaying = false;
 function handleMusic() {
     if (isPlaying) {
         loopingSound.pause();
-        // musichandler.style.backgroundImage = "url('all-assets/play.png')";
+        musichandler.style.backgroundImage = "url('all-assets/play.png')";
         isPlaying = false;
     } else {
         loopingSound.play();
-        // musichandler.style.backgroundImage = "url('all-assets/pause.png')";
+        musichandler.style.backgroundImage = "url('all-assets/pause.png')";
         isPlaying = true;
     }
 }
