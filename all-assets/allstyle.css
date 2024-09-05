@@ -22,10 +22,31 @@ body {
     z-index: 1;
 }
 
+.musichandler {
+    position: fixed;
+    top: 85%;
+    left: 2.5%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    /* background-image: url(play.png); */
+    width: 6%;
+    height: 10%;
+    z-index: 2;
+    background-color: red;
+}
+
 @media (max-width: 700px) {
     .framescreen {
         position: sticky;
         width: 1900px;
+    }
+
+    .musichandler {
+        top: 85%;
+        left: 2.5%;
+        width: 20%;
+        height: 10%;
     }
 
     * {

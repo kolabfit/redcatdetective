@@ -15,3 +15,23 @@ function setPage() {
     framescreen.style.height = window.innerHeight + "px";
     console.log(framescreen.style.height + "px");
 }
+
+const loopingSound = new Audio("all-assets/backsoundsfx.mp3");
+
+const musichandler = document.getElementById("musichandler");
+
+loopingSound.loop = true;
+
+let isPlaying = false;
+
+function handleMusic() {
+    if (isPlaying) {
+        loopingSound.pause();
+        // musichandler.style.backgroundImage = "url('all-assets/play.png')";
+        isPlaying = false;
+    } else {
+        loopingSound.play();
+        // musichandler.style.backgroundImage = "url('all-assets/pause.png')";
+        isPlaying = true;
+    }
+}

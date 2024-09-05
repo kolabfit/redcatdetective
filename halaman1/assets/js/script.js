@@ -24,15 +24,10 @@ document.addEventListener("mousemove", function (e) {
     title.style.transform = `translateX(${offsetTittle}px)`;
 });
 
-// Blinking
-
-const blink = document.getElementById("blink");
-
-const randomDelay = Math.random() * 2 + "s"; // Random delay between 0 and 2 seconds
-blink.style.setProperty("--random-delay", randomDelay);
-
 // Animasi Belt
 
+const beltSound = new Audio("assets/sounds/sabukmuter.MP3");
+beltSound.loop = false;
 let running = false;
 
 function rotatebeltlogo() {
@@ -43,6 +38,8 @@ function rotatebeltlogo() {
     running = true;
     let move = null;
     let rotation = 0;
+    beltSound.play();
+    beltSound.currentTime = 0;
     const elem = document.getElementById("logobelt");
 
     clearInterval(move);
@@ -51,7 +48,11 @@ function rotatebeltlogo() {
     function frame() {
         if (rotation >= 720) {
             running = false;
+            beltSound.pause();
             clearInterval(move);
+        } else if (rotation == 360) {
+            beltSound.play();
+            rotation += 2;
         } else {
             rotation += 2;
             elem.style.transform = `rotate(${rotation}deg)`;
@@ -61,6 +62,10 @@ function rotatebeltlogo() {
 
 // Animasi Motor
 
+const motorJauh = new Audio("assets/sounds/motorjauh.MP3");
+motorJauh.loop = false;
+const motorDekat = new Audio("assets/sounds/motordekat.MP3");
+motorDekat.loop = false;
 let runningMotor = false;
 
 function motorRide() {
@@ -74,6 +79,9 @@ function motorRide() {
     let posX = 0;
     let posY = 0;
     let rotationMotor = 0;
+
+    motorJauh.play();
+    motorJauh.currentTime = 0;
 
     clearInterval(move);
     move = setInterval(firstFrame, 20);
@@ -90,6 +98,7 @@ function motorRide() {
                 posY = 50;
                 motor.style.transform = `translate(${posX}%, ${posY}%)`;
                 move = setInterval(secondFrame, 20);
+                motorDekat.play();
             }, 1000); // Delay 1 detik
         } else {
             posX -= 10;
@@ -106,9 +115,8 @@ function motorRide() {
         } else {
             posX -= 2;
             posY -= 5;
-            rotationMotor += 0.1;
-            motor.style.transform = `rotate(${rotationMotor}deg)`;
-            motor.style.transform = `translate(${posX}%, ${posY}%)`;
+            rotationMotor += 0.2;
+            motor.style.transform = `rotate(${rotationMotor}deg) translate(${posX}%, ${posY}%)`;
         }
     }
 
@@ -121,9 +129,10 @@ function motorRide() {
             motor.style.height = 16 + "%";
             clearInterval(move);
         } else {
-            posX -= 1;
-            posY += 0.5;
-            motor.style.transform = `translate(${posX}%, ${posY}%)`;
+            posX -= 2;
+            posY += 1.5;
+            rotationMotor += 0.2;
+            motor.style.transform = `rotate(${rotationMotor}deg) translate(${posX}%, ${posY}%)`;
         }
     }
 }
