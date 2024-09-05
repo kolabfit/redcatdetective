@@ -37,7 +37,7 @@ body {
 }
 
 .musichandler:hover {
-    cursor: url(CURSORhover.png) 30 30, crosshair;
+    cursor: url(CURSORHOVER.png) 30 30, crosshair;
 }
 
 @media (max-width: 700px) {
