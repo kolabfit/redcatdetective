@@ -36,6 +36,10 @@ body {
     background-color: red;
 }
 
+.musichandler:hover {
+    cursor: url(CURSORhover.png) 30 30, crosshair;
+}
+
 @media (max-width: 700px) {
     .framescreen {
         position: sticky;

@@ -1,6 +1,6 @@
-function wait(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-}
+// function wait(ms) {
+//     return new Promise((resolve) => setTimeout(resolve, ms));
+// }
 
 window.addEventListener("resize", function () {
     setPage();
