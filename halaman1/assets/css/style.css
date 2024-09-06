@@ -407,3 +407,45 @@ p{
 .popup-trigger:hover {
     cursor: url(../../../all-assets/CURSORHOVER.png) 30 30, crosshair;
 }
+
+.CAImageText {
+    width: 30px;
+    height: 30px;
+}
+
+.Email {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.Email:hover{
+    cursor: url(../../../all-assets/CURSORHOVER.png) 30 30, crosshair;
+}
+
+.CaCode{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.CaCode:hover{
+    cursor: url(../../../all-assets/CURSORHOVER.png) 30 30, crosshair;
+}
+
+.CAImageEmail {
+    width: 30px;
+    height: 30px;
+}
+
+.address{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 95;
+    bottom: 2.5%;
+    left: 6%;
+}

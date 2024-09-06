@@ -35,19 +35,3 @@ function handleMusic() {
         isPlaying = true;
     }
 }
-
-function copyText() {
-    navigator.clipboard.writeText(
-        "CP4AK1sZfucyM7LBFr2eMJqd9wYcfR9nay8QgiC2Sasaww"
-    );
-
-    alert("Link berhasil disalin!");
-}
-
-function copyEmail() {
-    navigator.clipboard.writeText(
-        "rcatdetective@gmail.com"
-    );
-
-    alert("Email berhasil disalin!");
-}
